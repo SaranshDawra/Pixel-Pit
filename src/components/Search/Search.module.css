@@ -1,0 +1,80 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
+.Hero {
+    background-image: url("https://cdn.pixabay.com/index/2020/07/13/14-04-33-934_1920x430.jpg");
+    /* height: 430px; */
+    background-color: #555;
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    background-position: 30%;
+}
+
+.Overlay {
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.Top {
+    color: white;
+    position: relative;
+    padding-top: 120px;
+}
+
+.Top h1 {
+    font-size: 37px;
+    font-weight: 500;
+    margin: 0px;
+}
+
+.Top h2 {
+    font-weight: 200;
+}
+
+.Form {
+    position: relative;
+    padding: 35px;
+}
+
+.Form {
+    position: relative;
+}
+
+.Input {
+    text-indent: 40px;
+    padding: 10px;
+    width: 50%;
+    font-size: 25px;
+    font-weight: lighter;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    height: 40px;
+}
+
+.Icon {
+    position: absolute;
+    padding-top: 18px;
+    padding-left: 15px;
+    font-size: 20px;
+}
+
+@media (max-width: 426px) {
+    .Input {
+        width: 70%;
+    }
+
+    .Form {
+        padding: 45px;
+    }
+}
+
+.Popular {
+    color: #ddd;
+    font-size: 15px;
+    margin-bottom: 70px;
+}
