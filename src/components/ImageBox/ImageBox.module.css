@@ -1,0 +1,54 @@
+.ImageBox {
+    margin: 30px auto;
+    text-align: center;
+    width: 95%;
+    box-sizing: border-box;
+}
+
+.List {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-inline-start: 0px;
+}
+
+.ListEl {
+    height: 40vh;
+    flex-grow: 1;
+    margin: 7px;
+}
+
+.Image {
+    max-height: 100%;
+    min-width: 100%;
+    vertical-align: bottom;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    .ListEl {
+        height: 30vh;
+    }
+}
+
+@media (max-height: 480px) {
+    .ListEl {
+        height: 80vh;
+    }
+}
+
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+    .List {
+        flex-direction: row;
+    }
+
+    .ListEl {
+        height: auto;
+        width: 100%;
+    }
+
+    .Image {
+        width: 100%;
+        max-height: 75vh;
+        min-width: 0;
+    }
+}
