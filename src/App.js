@@ -33,7 +33,7 @@ class App extends Component {
         if (this.state.isSubmit) {
             axios
                 .get(
-                    `https://pixabay.com/api/?key=${API_KEY}&q=${this.state.query}&image_type=photo&per_page=30`
+                    `https://pixabay.com/api/?key=${API_KEY}&q=${this.state.query}&image_type=photo&per_page=31`
                 )
                 .then((result) => {
                     // console.log("Result Array: ", result.data);
@@ -55,7 +55,7 @@ class App extends Component {
     componentDidMount() {
         axios
             .get(
-                `https://pixabay.com/api/?key=${API_KEY}&q=workspace&image_type=photo&per_page=30`
+                `https://pixabay.com/api/?key=${API_KEY}&q=dog&image_type=photo&per_page=31`
             )
             .then((result) => {
                 console.log(result.data);
