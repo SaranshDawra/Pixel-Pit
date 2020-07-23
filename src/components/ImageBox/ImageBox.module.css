@@ -1,4 +1,6 @@
 .ImageBox {
+    overflow: hidden;
+    position: relative;
     margin: 30px auto;
     text-align: center;
     width: 95%;
@@ -51,4 +53,43 @@
         max-height: 75vh;
         min-width: 0;
     }
+}
+
+@media (max-width: 375px) {
+    .Image {
+        max-height: 50vh;
+    }
+}
+
+.ImageBoxIcon {
+    min-width: 100%;
+    position: relative;
+    bottom: 32px;
+    animation: fadeIn 1s ease-in;
+    background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.685),
+        transparent
+    );
+}
+
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.Download {
+    cursor: pointer;
+}
+
+.Icon {
+    position: relative;
+    font-size: 1.8rem;
+    color: #ddd;
+    left: 40%;
 }
