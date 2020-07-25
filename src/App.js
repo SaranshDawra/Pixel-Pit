@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Search from "./components/Search/Search";
 import ImageBox from "./components/ImageBox/ImageBox";
+import ItemNotFound from "./components/ImageNotFound/ImageNotFound";
 import classes from "./App.module.css";
 import axios from "axios";
 import { API_KEY } from "./api";
@@ -42,10 +43,12 @@ class App extends Component {
                         this.setState({
                             items: result.data.hits,
                             isValid: true,
+                            value: "",
                         });
                     } else {
                         this.setState({
                             isValid: false,
+                            value: "",
                         });
                     }
                 })
@@ -78,9 +81,11 @@ class App extends Component {
                     changed={this.handleInputChange}
                     value={this.state.value}
                 />
-                {
-                    this.state.isValid ? <ImageBox items={this.state.items} /> : <p>Error 404</p>
-                }
+                {this.state.isValid ? (
+                    <ImageBox items={this.state.items} />
+                ) : (
+                    <ItemNotFound />
+                )}
             </div>
         );
     }
