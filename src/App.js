@@ -11,6 +11,7 @@ class App extends Component {
         items: [],
         query: "",
         isSubmit: false,
+        isValid: true,
     };
 
     handleInputChange = (e) => {
@@ -40,9 +41,12 @@ class App extends Component {
                     if (result.data.hits.length !== 0) {
                         this.setState({
                             items: result.data.hits,
+                            isValid: true,
                         });
                     } else {
-                        alert("Sorry No Item Found");
+                        this.setState({
+                            isValid: false,
+                        });
                     }
                 })
                 .catch((err) => console.log(err));
@@ -74,7 +78,9 @@ class App extends Component {
                     changed={this.handleInputChange}
                     value={this.state.value}
                 />
-                <ImageBox items={this.state.items}/>
+                {
+                    this.state.isValid ? <ImageBox items={this.state.items} /> : <p>Error 404</p>
+                }
             </div>
         );
     }
