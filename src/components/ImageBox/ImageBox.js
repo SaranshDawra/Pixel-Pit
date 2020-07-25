@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+import FileSaver from "file-saver";
 import classes from "./ImageBox.module.css";
 import { FiDownload } from "react-icons/fi";
 
 class ImageBox extends Component {
+    downloadHandler = (url, filename) => {
+        FileSaver.saveAs(url, filename);
+    };
+
     render() {
         return (
             <div className={classes.ImageBox}>
@@ -19,7 +24,15 @@ class ImageBox extends Component {
                                     alt={tag[0]}
                                 />
                                 <div className={classes.ImageBoxIcon}>
-                                    <span className={classes.Download}>
+                                    <span
+                                        onClick={() =>
+                                            this.downloadHandler(
+                                                item.largeImageURL,
+                                                tag[0],
+                                            )
+                                        }
+                                        className={classes.Download}
+                                    >
                                         <FiDownload className={classes.Icon} />
                                     </span>
                                 </div>
