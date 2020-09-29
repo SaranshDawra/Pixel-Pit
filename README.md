@@ -1,14 +1,14 @@
 ### View Live Demo
-<pre><a href="https://markdown-previewer-ruddy.vercel.app/"><b>https://pixel-pit.vercel.app/</b></a></pre>
+<pre><a href="https://pixel-pit.vercel.app/"><b>https://pixel-pit.vercel.app/</b></a></pre>
 
 ### Images
 <details>
-  <summary>Editor</summary>
+  <summary>Search</summary>
   <img src="./images/search.png" height="75%" width="75%">
 </details>
 
 <details>
-  <summary>Previewer</summary>
+  <summary>Gallary</summary>
   <img src="./images/gallary.png" height="75%" width="75%">
 </details>
 
@@ -21,7 +21,7 @@ git clone https://github.com/SaranshDawra/Pixel-Pit.git
 ```
 #### Move to desired directory
 ```bash
-cd Markdown-Previewer
+cd Pixel-Pit
 ```
 #### To install the dependencies
 ```bash
